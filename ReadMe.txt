@@ -18,3 +18,9 @@ docker rm -f user-service
 docker rm -f api-gateway
 
 docker network create my-network
+
+
+AUTH_SERVICE_URL=http://localhost:3000
+RES_SERVICE_URL=http://localhost:8082
+ORDER_SERVICE_URL=http://localhost:8081
+PORT=5000

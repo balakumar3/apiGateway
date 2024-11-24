@@ -1,5 +1,5 @@
 const express = require('express');
-const handleProxyRequest = require('../controller/proxyController');
+const handleProxyRequest = require('../controller/proxyRestaurantController');
 require('dotenv').config();
 
 const restaurantRouter = express.Router();

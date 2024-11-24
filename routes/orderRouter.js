@@ -1,5 +1,5 @@
 const express = require('express');
-const handleProxyRequest = require('../controller/proxyController');
+const handleProxyRequest = require('../controller/proxyOrderController');
 require('dotenv').config();
 
 const orderRouter = express.Router();
