@@ -9,7 +9,11 @@ restaurantRouter.use((req, res, next) => {
     next();
 });
 
-restaurantRouter.get('/restaurant', handleProxyRequest);
-restaurantRouter.patch('/restaurant', handleProxyRequest);
+restaurantRouter.get('/restaurant/:id', handleProxyRequest);
+restaurantRouter.get('/restaurant?restaurantName=', handleProxyRequest);
+restaurantRouter.post('/restaurant/:id/updateRestaurant', handleProxyRequest);
+restaurantRouter.post('/restaurant/:id/updateRestaurantOrder', handleProxyRequest);
+restaurantRouter.post('/menuItem/:id/updatemenuitem', handleProxyRequest);
+restaurantRouter.get('/menuItem/:id', handleProxyRequest);
 
 module.exports = restaurantRouter;

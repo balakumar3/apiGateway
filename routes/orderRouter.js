@@ -9,7 +9,8 @@ orderRouter.use((req, res, next) => {
     next();
 });
 
-orderRouter.get('/order', handleProxyRequest);
-orderRouter.patch('/order', handleProxyRequest);
+orderRouter.post('/orders', handleProxyRequest);
+orderRouter.get('/orders/:id', handleProxyRequest);
+orderRouter.post('/orders/:id/updateOrder', handleProxyRequest);
 
 module.exports = orderRouter;
