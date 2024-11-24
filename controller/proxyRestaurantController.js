@@ -4,6 +4,13 @@ const proxy = httpProxy.createProxyServer();
 // Function to handle proxying the request
 const handleResProxyRequest = (req, res) => {
     const targetUrl = process.env.RES_SERVICE_URL;
+
+    // Construct the full target URL with query parameters
+    const url = new URL(targetUrl);
+    Object.keys(req.query).forEach((key) => {
+        url.searchParams.append(key, req.query[key]);
+    });
+
     // Attach the body to the proxy request
     req.on('data', (chunk) => {
         req.body = JSON.parse(chunk.toString());
